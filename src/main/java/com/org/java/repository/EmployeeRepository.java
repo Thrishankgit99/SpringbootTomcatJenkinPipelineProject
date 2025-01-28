@@ -30,8 +30,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     @Query("SELECT e FROM Employee e")
 	List<Employee> findAllEmployees();
       
-    @Query("SELECT FROM employee where salary= (select max(salary) from employee)")
-     Employee findMaxSalary();
+	/*
+	 * @Query("SELECT e FROM employee where salary= (select max(salary) from employee)"
+	 * ) Employee findMaxSalary();
+	 */
 
 }
 /*

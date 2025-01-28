@@ -159,16 +159,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return oddIds;
 	}
 
-	@Override
-	public Employee findByMaxSalaryDeatails() {
-		Employee maxSalary = employeeRepository.findMaxSalary();
-		 //Employee
-		// maxSalary11=list.stream().max((s1,s2)->s1.getSalary()<s2.getSalary()?-1:s1.getSalary()<s2.getSalary()?1:0).get();
-		//Employee maxSalaryEmployee = list.stream().max(Comparator.comparingDouble(s1 -> s1.getSalary())).get();
-		return maxSalary;
-		// return maxSalary;
-	}
-
+	/*
+	 * @Override public Employee findByMaxSalaryDeatails() { Employee maxSalary =
+	 * employeeRepository.findMaxSalary(); //Employee //
+	 * maxSalary11=list.stream().max((s1,s2)->s1.getSalary()<s2.getSalary()?-1:s1.
+	 * getSalary()<s2.getSalary()?1:0).get(); //Employee maxSalaryEmployee =
+	 * list.stream().max(Comparator.comparingDouble(s1 -> s1.getSalary())).get();
+	 * return maxSalary; // return maxSalary; }
+	 */
 	@Override
 	public Employee findByMinSalaryDeatails() {
 		List<Employee> list = employeeRepository.findAll();

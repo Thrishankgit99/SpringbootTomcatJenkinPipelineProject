@@ -142,11 +142,11 @@ public class EmployeeController {
 		return new ResponseEntity(emplist, HttpStatus.OK);
 	}
 
-	@GetMapping("/MaxSalary")
-	public ResponseEntity<Employee> findByMaxSalary() {
-		Employee emplist = employeeService.findByMaxSalaryDeatails();
-		return new ResponseEntity(emplist, HttpStatus.OK);
-	}
+	/*
+	 * @GetMapping("/MaxSalary") public ResponseEntity<Employee> findByMaxSalary() {
+	 * Employee emplist = employeeService.findByMaxSalaryDeatails(); return new
+	 * ResponseEntity(emplist, HttpStatus.OK); }
+	 */
 
 	@GetMapping("/SecondHigestSalary")
 	public ResponseEntity<Employee> SecondHigestSalary() {

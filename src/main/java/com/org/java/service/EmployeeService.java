@@ -34,7 +34,7 @@ public interface EmployeeService {
 
 	List<Employee> findByEmployeeIdOddDeatails();
 
-	Employee findByMaxSalaryDeatails();
+	/* Employee findByMaxSalaryDeatails(); */
 
 	Employee findByMinSalaryDeatails();
 
