@@ -21,7 +21,6 @@ import org.springframework.stereotype.Component;
 
 import com.org.java.controller.EmployeeController;
 import com.org.java.dto.EmployeeDto;
-import com.org.java.entity.Company;
 import com.org.java.entity.Employee;
 import com.org.java.exception.EmptyInputException;
 import com.org.java.exception.NoDataAvailableException;
@@ -52,7 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<Employee> findAllEmployeeDetails() {
 		// TODO Auto-generated method stub
-		List<Employee> list = employeeRepository.findAll();
+		List<Employee> list = employeeRepository.findAllEmployees();
 		if (list.isEmpty()) {
 			throw new NoDataAvailableException("600", "No Data available");
 		}
@@ -162,11 +161,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee findByMaxSalaryDeatails() {
-		List<Employee> list = employeeRepository.findAll();
-		 Employee
-		 maxSalary11=list.stream().max((s1,s2)->s1.getSalary()<s2.getSalary()?-1:s1.getSalary()<s2.getSalary()?1:0).get();
-		Employee maxSalaryEmployee = list.stream().max(Comparator.comparingDouble(s1 -> s1.getSalary())).get();
-		return maxSalaryEmployee;
+		Employee maxSalary = employeeRepository.findMaxSalary();
+		 //Employee
+		// maxSalary11=list.stream().max((s1,s2)->s1.getSalary()<s2.getSalary()?-1:s1.getSalary()<s2.getSalary()?1:0).get();
+		//Employee maxSalaryEmployee = list.stream().max(Comparator.comparingDouble(s1 -> s1.getSalary())).get();
+		return maxSalary;
 		// return maxSalary;
 	}
 

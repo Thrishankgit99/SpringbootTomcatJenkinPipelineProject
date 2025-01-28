@@ -35,6 +35,5 @@ public class Employee {
 	private String email;
 	private int departmentId;
 	private String deptName;
-	@OneToMany
-	private List<Company> comapanies;
+	
 }

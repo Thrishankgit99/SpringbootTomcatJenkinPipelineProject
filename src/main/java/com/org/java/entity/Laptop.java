@@ -1,9 +1,5 @@
 package com.org.java.entity;
-
-import java.util.Date;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,12 +11,13 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode
 @ToString
-public class Company {
-@Id
-@GeneratedValue
-private int id;
-private String name;
-private String addess;
+@EqualsAndHashCode
+public class Laptop {
+
+	@Id
+	private int laptopId;
+	private String laptopName;
+	private String modelName;
+	private double price;
 }
